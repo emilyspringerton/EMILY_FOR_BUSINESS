@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-09-11
+- docs: new, real, spec-only `docs/UNIVERSAL_UI_NORTHSTAR.md` -- the frontend half of the sharpened Emily For Business platform pitch. Founder real-time: "we need a super abstract language for affordances like a BA would write a user can do this... like react native but even more abstract -- like we target ratatui and android native and react native and flutter and everything you just need to write an adaptor." Names honestly why this is harder than React Native/Flutter (both commit to one GUI-widget-tree paradigm; a terminal is a categorically different one), grounds the idea in this monorepo's own proven "one source, many real target emitters" pattern (PARENA's own C/Java/TS backends, KARAMBIT/SPIDERBEETLE's "PARENA owns decision logic, thin native host does I/O" split as the direct Adapter precedent), proposes a 3-layer model (Affordance IR / Capability Model with mandatory explicit degradation / per-target Adapters), names 5 real open design questions, and a 4-phase plan proving the hardest target pair first. No name locked in, no repo created, no code. CLAUDE.md updated (Status + Related Repos). (sess-20260905-0720-ec33e7c5)
+
 ## 2026-09-03
 
 - Repo created (upstream pre-created empty, pulled in this session). New `LICENSE.md` ("The

@@ -15,9 +15,23 @@ here vs. staying in IDUNA itself.
 
 ## Status
 
-Licensing only. No product code yet — real next step (per the NORTHSTAR doc's own "Open
-questions") is a founder-level decision on whether this repo becomes a literal externalization of
-IDUNA, or a separate product that reuses IDUNA's design.
+Licensing only. No product code yet. The founder-level decision named in the "Open questions"
+above was resolved 2026-09-03 (see `IDUNA/docs/EMILY_FOR_BUSINESS_NORTHSTAR.md`'s own "IDUNA_PRO
+— a real extraction plan" section): this is a separate, sibling product (`IDUNA_PRO`, its own
+real repo) built from a real subset of IDUNA's code, with internal IDUNA staying the backbone AND
+becoming the control plane that provisions/tracks it.
+
+**Real, spec-only pass, 2026-09-11**: the pitch sharpened into "the Rails for 2026 agents is an
+API that lets you create APIs" — since IDUNA_PRO already solves IAM, an agent (Claude,
+specifically — this is explicitly NOT an LLM-hosting product) building a new app just adds APIs
+on top, with login/authz free. Two new real, spec-only NORTHSTAR docs came out of this: this
+repo's own `docs/UNIVERSAL_UI_NORTHSTAR.md` (the frontend half — an abstract, BA-authored
+"affordance" language targeting Android native/React Native/Flutter/a ratatui terminal via
+per-platform adapters, honestly naming why that's harder than React Native/Flutter's own
+single-paradigm cross-platform story) and `IDUNA_PRO/docs/MULTI_TENANCY_NORTHSTAR.md` (the real
+Phase 0 this whole pitch depends on: IDUNA_PRO today is checked, live, literally "just a fork of
+IDUNA for CarePyre" — one process, one database, ten files with `carepyre` hardcoded by name —
+not yet capable of the fast, self-serve tenant creation this pitch assumes). No code in either.
 
 ## The Emily License v0
 
@@ -29,9 +43,13 @@ Chef Software's real trademark-policy split (code is one concern, the name is an
 
 ## Related Repos
 
-- `IDUNA` — the real trust-authority backbone this product's own scoping doc is built on;
-  `docs/EMILY_FOR_BUSINESS_NORTHSTAR.md` lives there, not here, until the founder resolves
-  whether this becomes IDUNA-externalized or a separate product.
+- `IDUNA` — the real trust-authority backbone AND the real control plane that will
+  provision/track `IDUNA_PRO` tenants; `docs/EMILY_FOR_BUSINESS_NORTHSTAR.md` lives there.
+- `IDUNA_PRO` — the actual product code (extracted 2026-09-03); `docs/MULTI_TENANCY_NORTHSTAR.md`
+  there is the real Phase 0 engineering plan this repo's own pitch depends on.
+- `LO`/`PARENA` — `LO/FRAMEWORK_NORTHSTAR.md`'s own real, already-shipped Rails-like framework
+  (routing/models/controllers, dogfooded via `SHITHUB`) is one real, concrete option (not the
+  only one) for "an API that lets you create APIs."
 - `EmilyOS` — posture-kernel design (`docs/POSTURE.md`), named in the NORTHSTAR doc as an open
   question re: whether it folds into this pitch.
 - `EMILY` — RSI loop / backlog coordination for cross-repo work.
